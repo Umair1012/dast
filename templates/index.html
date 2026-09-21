@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevSecOps Security Lab</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #d1d5db;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 11px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>DevSecOps Security Lab</h1>
+    <p>Intentionally vulnerable application for security testing</p>
+</header>
+
+
+<div class="container">
+
+    <div class="card warning">
+        <h2>⚠ Training Application</h2>
+
+        <p>
+            This application intentionally contains security vulnerabilities.
+        </p>
+
+        <p>
+            Use it only in an isolated training environment for tools such as
+            Gitleaks, Semgrep and OWASP ZAP.
+        </p>
+    </div>
+
+
+    <div class="card">
+
+        <h2>Login</h2>
+
+        <form action="/login" method="POST">
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p>
+            Training credentials:
+            <code>admin</code> /
+            <code>admin123</code>
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>User Search</h2>
+
+        <p>
+            Search for a user from the database.
+        </p>
+
+        <form action="/user" method="GET">
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Example: admin"
+                required
+            >
+
+            <button type="submit">
+                Search User
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Security Testing Lab</h2>
+
+        <p>This application can be used for practicing:</p>
+
+        <ul>
+            <li>Gitleaks — Secret Detection</li>
+            <li>Semgrep — Static Application Security Testing</li>
+            <li>OWASP ZAP — Dynamic Application Security Testing</li>
+            <li>SQL Injection Detection</li>
+            <li>DevSecOps CI/CD Security Scanning</li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<footer>
+    DevSecOps Training Lab
+</footer>
+
+</body>
+
+</html>
